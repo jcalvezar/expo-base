@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function HomeScreen({ navigation }) {
+export default function Home3Screen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text>Home3 Screen</Text>
     </View>
   );
 }

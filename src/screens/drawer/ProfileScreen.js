@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function HomeScreen({ navigation }) {
+export default function ProfileScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 }

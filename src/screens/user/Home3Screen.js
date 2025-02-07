@@ -1,18 +1,14 @@
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
-
-export default function Home3Screen({ navigation }) {
+import i18n from "../../localization/localization";
+const Home3Screen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home3 Screen</Text>
+    <View>
+      <Text>{i18n.t("home3.title")}</Text>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+export default Home3Screen;
+
+const styles = StyleSheet.create({});

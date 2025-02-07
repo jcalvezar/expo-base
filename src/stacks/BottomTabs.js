@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import HomeScreen from "../screens/user/HomeScreen";
 import ProfileScreen from "../screens/user/Home2Screen";
 import SettingsScreen from "../screens/user/Home3Screen";
-
+import i18n from "../localization/localization";
 const HeaderIcon = () => {
   const navigation = useNavigation();
 
@@ -31,19 +32,34 @@ export default function BottomTabs({ navigation }) {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name={i18n.t("home.title")}
         component={HomeScreen}
-        options={{ title: "Home" }}
+        options={{
+          title: i18n.t("home.title"),
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
       />
       <Tab.Screen
-        name="Home 2"
+        name={i18n.t("home2.title")}
         component={ProfileScreen}
-        options={{ title: "Home 2" }}
+        options={{
+          title: i18n.t("home2.title"),
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
       />
       <Tab.Screen
-        name="Home 3"
+        name={i18n.t("home3.title")}
         component={SettingsScreen}
-        options={{ title: "Home 3" }}
+        options={{
+          title: i18n.t("home3.title"),
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
       />
     </Tab.Navigator>
   );

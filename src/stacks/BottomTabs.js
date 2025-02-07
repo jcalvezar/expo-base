@@ -29,6 +29,10 @@ export default function BottomTabs({ navigation }) {
     <Tab.Navigator
       screenOptions={{
         headerLeft: HeaderIcon,
+        tabBarStyle: {
+          //paddingBottom: 10, // Safe area padding + extra padding
+          height: 70, // Adjust height to match padding
+        },
       }}
     >
       <Tab.Screen
